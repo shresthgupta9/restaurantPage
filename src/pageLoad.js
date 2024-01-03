@@ -1,9 +1,10 @@
+import "./styles.css";
 import createNavbar from "./navbar";
 import createHomepage from "./homepage";
-
-import "./styles.css";
+import background from "./background";
 
 function initialize() {
+    background();
     createNavbar();
     createHomepage();
 }

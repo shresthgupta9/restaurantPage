@@ -5,16 +5,26 @@ const createHomepage = () => {
 
     const pageContent = document.createElement("div");
     pageContent.classList.add("page-content");
+    pageContent.style.display = "flex";
+    pageContent.style.justifyContent = "center";
 
-    const image = document.createElement("img");
-    image.src = homepageImg;
-    image.classList.add("mainimg");
-    pageContent.append(image);
+    const homepg = document.createElement("div");
+    homepg.classList.add("homepage");
 
-    const line = document.createElement("div");
-    line.textContent = "Welcome!";
-    pageContent.append(line);
+    const heading = document.createElement("h1");
+    heading.classList.add("heading");
+    heading.textContent = "Doggy Respawrant";
+    homepg.appendChild(heading);
 
+    const txt1 = document.createElement("div");
+    txt1.classList.add("txt");
+    
+    txt1.textContent = "Doggo has the best bone in town! The atmosphere and customer service make you feel like you are sitting in the middle of a kennel, eating like a doggo! This is exactly the kind of place that I like to return to again and again."
+    homepg.appendChild(txt1);
+
+    
+
+    pageContent.appendChild(homepg);
     content.appendChild(pageContent);
 }
 

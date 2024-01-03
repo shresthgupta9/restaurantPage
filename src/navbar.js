@@ -7,7 +7,6 @@ const createNavbar = () => {
 
     const navbar = document.createElement("div");
     navbar.classList.add("navbar");
-    navbar.style.display = "flex";
 
     const home = document.createElement("p");
     home.textContent = "Home";
