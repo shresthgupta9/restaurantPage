@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  z-index: 9999;
 }
 
 #content {
@@ -11,6 +12,7 @@
   background-repeat: repeat-y;
   background-attachment: fixed;
   background-position: center;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -33,16 +35,87 @@
   color: rgb(94, 94, 94);
 }
 
-.homepage {
+.page-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 65px;
+}
+
+.homepage,
+.menupage,
+.contactpage {
   border-radius: 20px;
   margin-top: 20px;
   background-color: white;
-  width: 60vw;
+  width: 45vw;
   font-family: "Mukta", sans-serif;
+  background: transparent;
 }
 
 .heading {
   font-size: 40px;
   text-align: center;
   font-weight: 400;
+  background-color: white;
+  border: 20px solid rgb(132, 132, 132);
+  border-radius: 40px;
+}
+
+.txt {
+  padding: 15px 100px;
+  border: 20px solid rgb(132, 132, 132);
+  margin: 20px 0;
+  border-radius: 40px;
+  background-color: white;
+}
+
+.menupage .txt,
+.contactpage .txt {
+  text-align: center;
+}
+
+.txt h1,
+.txt p {
+  text-align: center;
+  font-weight: 500;
+}
+
+.txt img {
+  width: 250px;
+  border-radius: 20px;
+}
+
+.footer {
+  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  background-color: #e6e6e6;
+  font-family: "Mukta", sans-serif;
+  text-align: center;
+  z-index: 1;
+}
+
+.footer h2 {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1280px) {
+  .homepage,
+  .menupage,
+  .contactpage {
+    width: 90vw;
+  }
+  .txt {
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .txt {
+    padding: 15px 10px;
+  }
+  .txt img {
+    width: 190px;
+  }
 }
