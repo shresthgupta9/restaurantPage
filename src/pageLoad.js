@@ -4,8 +4,6 @@ import createNavbar from "./navbar";
 import createHomepage from "./homepage";
 import createFooter from "./footer"
 
-import createMenuPage from "./menu";
-
 function initialize() {
     background();
     createNavbar();
